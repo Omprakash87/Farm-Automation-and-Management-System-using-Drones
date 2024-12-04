@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.mainController">
+   <children>
+      <SplitPane dividerPositions="0.41143048128342247" layoutX="-2.0" layoutY="-3.0" prefHeight="600.0" prefWidth="1000.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="collect" layoutX="3.0" layoutY="4.0" mnemonicParsing="false" onAction="#fletch" text="info" />
+                  <Button fx:id="farmScan" layoutX="45.0" layoutY="4.0" mnemonicParsing="false" onAction="#scanFarm" text="scan farm" />
+                  <Button fx:id="Item" layoutX="120.0" layoutY="4.0" mnemonicParsing="false" onAction="#flyToItem" text="fly to item" />
+                  <TextArea fx:id="message" layoutY="339.0" prefHeight="257.0" prefWidth="407.0" />
+                  <Label layoutX="4.0" layoutY="322.0" prefHeight="17.0" prefWidth="100.0" text="Drone Status" />
+                  <TreeView fx:id="treeView" layoutX="-2.0" layoutY="34.0" prefHeight="280.0" prefWidth="417.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="567.0">
+               <children>
+                  <AnchorPane layoutX="8.0" layoutY="7.0" prefHeight="248.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                     <children>
+                        <Label layoutX="30.0" layoutY="7.0" text="Drone Controll Panel">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="forward" layoutX="60.0" layoutY="69.0" mnemonicParsing="false" onAction="#moveForward" prefHeight="25.0" prefWidth="75.0" text="Forward" />
+                        <Button fx:id="backward" layoutX="62.0" layoutY="134.0" mnemonicParsing="false" onAction="#moveBackward" prefHeight="25.0" prefWidth="75.0" text="Backward" />
+                        <Button fx:id="left" layoutX="13.0" layoutY="103.0" mnemonicParsing="false" onAction="#moveLeft" prefHeight="25.0" prefWidth="75.0" text="Left" />
+                        <Button fx:id="right" layoutX="111.0" layoutY="104.0" mnemonicParsing="false" onAction="#moveRight" prefHeight="25.0" prefWidth="75.0" text="Right" />
+                        <Button fx:id="takeOff" layoutX="60.0" layoutY="36.0" mnemonicParsing="false" onAction="#takeOff" prefHeight="25.0" prefWidth="75.0" text="Take Off" />
+                        <Button fx:id="land" layoutX="62.0" layoutY="166.0" mnemonicParsing="false" onAction="#land" prefHeight="25.0" prefWidth="75.0" text="Land" />
+                        <Button fx:id="DisCon" layoutX="45.0" layoutY="211.0" mnemonicParsing="false" text="Disconnect Drone" />
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
